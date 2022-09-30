@@ -130,7 +130,7 @@ class MLPActorCritic(nn.Module):
         if isinstance(action_space, gym.spaces.Discrete):
             self.pi = MLPCategoricalActor(obs_dim, action_space.n, hidden_sizes, activation)
         elif isinstance(action_space, gym.spaces.Box):
-            self.pi = MLPGuassianActor(ob_dim, action_space.shape[0], hidden_sizes, activation)
+            self.pi = MLPGuassianActor(obs_dim, action_space.shape[0], hidden_sizes, activation)
             
         # create the value function network
         self.v = MLPCritic(obs_dim, hidden_sizes, activation)

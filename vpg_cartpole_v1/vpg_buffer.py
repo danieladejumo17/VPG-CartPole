@@ -6,7 +6,7 @@ __all__ = ['VPGBuffer']
 # %% ../vpg_buffer.ipynb 1
 import numpy as np
 import torch
-import spinningup.vpg_core as core
+import vpg_cartpole_v1.vpg_core as core
 
 # %% ../vpg_buffer.ipynb 2
 class VPGBuffer:
